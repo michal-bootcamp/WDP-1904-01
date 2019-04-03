@@ -6,7 +6,7 @@ DO UZUPEŁNIENIA
 
 ## Demo
 
-DO UZUPEŁNIENIA
+https://lucid-heisenberg-a54431.netlify.com/
 
 ## Inicjacja projektu
 
