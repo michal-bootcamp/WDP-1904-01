@@ -209,7 +209,7 @@ header {
           outline: none;
 
           &::placeholder {
-            color: $text-color;
+            color: #a4a4a4;
           }
         }
 
@@ -217,6 +217,7 @@ header {
           border: 0;
           background-color: transparent;
           outline: none;
+          padding-right: 13px;
         }
       }
     }
