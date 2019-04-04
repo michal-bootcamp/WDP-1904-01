@@ -220,6 +220,38 @@ header {
           padding-right: 13px;
         }
       }
+      &:hover {
+        color: #fff;
+        .category {
+          background-color: $primary;
+
+          i:first-child {
+            color: #fff;
+          }
+          select {
+            color: #fff;
+            option {
+              background-color: $primary;
+            }
+            option[disabled] {
+              display: none;
+            }
+          }
+        }
+        .search-field {
+          background-color: $primary;
+          input {
+            background-color: $primary;
+            color: #fff;
+            &::placeholder {
+              color: #fff;
+            }
+          }
+          button {
+            color: #fff;
+          }
+        }
+      }
     }
   }
 }
