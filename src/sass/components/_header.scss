@@ -87,13 +87,14 @@ header {
         }
 
         .cart-counter {
+          padding-left: 5px;
           width: 28px;
           height: 27px;
           border-radius: 14px;
           background-color: $header-bg;
           display: flex;
           align-items: center;
-          justify-content: center;
+          justify-content: left;
           font-size: 14px;
           color: rgb(224, 227, 237);
           position: absolute;
