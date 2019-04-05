@@ -31,6 +31,22 @@ header {
       }
     }
 
+    .text-left ul ul li {
+      display: block;
+      display: none;
+    }
+
+    .text-left ul li ul {
+      position: absolute;
+      background-color: #864343;
+    }
+    .text-left ul li:hover ul li {
+      display: block;
+      height: 17px;
+      line-height: 3px;
+      padding: 7px;
+    }
+
     .text-right ul li {
       margin-left: 1.5rem;
 
