@@ -3,6 +3,16 @@
   text-align: center;
   margin-top: 40px;
 
+  &:hover {
+    @extend .active;
+  }
+
+  .link {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
   .icon {
     transform: translateY(-50%);
 
