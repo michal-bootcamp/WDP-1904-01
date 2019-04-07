@@ -57,16 +57,29 @@
     }
 
     .stars {
-      a {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      .star {
         text-decoration: none;
         color: rgb(42, 42, 42);
+        margin: 0 -4px;
+        padding: 0 4px;
         @extend .far;
         @extend .fa-star;
 
         &.full {
           @extend .fas;
+          color: $primary;
         }
       }
+    }
+    .stars > span:hover:before,
+    .stars > span:hover ~ span:before,
+    .stars > span.full:before,
+    .stars > span.full ~ span:before {
+      @extend .fas;
+      color: $primary;
     }
   }
 
