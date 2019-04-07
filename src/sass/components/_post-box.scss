@@ -1,3 +1,10 @@
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .post-box {
   margin-bottom: 2rem;
 
@@ -49,6 +56,18 @@
     .more {
       text-align: center;
       padding-top: 30px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+}
+
+@media (max-width: 576px) {
+  .row {
+    .col-4 {
+      width: 100%;
+      text-align: center;
     }
   }
 }
