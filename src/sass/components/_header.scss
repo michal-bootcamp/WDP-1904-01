@@ -115,10 +115,6 @@ header {
     box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
     background-color: #ffffff;
 
-    .container > .row {
-      /*height: 84px;*/
-    }
-
     .menu {
       display: flex;
       align-self: stretch;
@@ -169,13 +165,13 @@ header {
       .search-form {
         border: 1px solid $form-border-color;
         display: inline-flex;
-        height: 45px;
         color: $text-color;
 
         .category {
           border-right: 1px solid $form-border-color;
           display: flex;
           align-items: center;
+          height: 45px;
           position: relative;
 
           i:first-child {
@@ -206,6 +202,7 @@ header {
         .search-field {
           display: flex;
           align-items: center;
+          height: 45px;
           position: relative;
 
           input {
@@ -213,12 +210,12 @@ header {
             padding-left: 10px;
             font-size: 14px;
             outline: none;
+            max-width: 200px;
 
             &::placeholder {
               color: $text-color;
             }
           }
-
           button {
             border: 0;
             background-color: transparent;
@@ -264,7 +261,6 @@ header {
 
           li {
             height: 50px;
-
             a {
               width: 100%;
               border-top: 0;
@@ -272,15 +268,20 @@ header {
             }
           }
         }
-
         &.show {
           display: flex;
         }
       }
-
       .mobile-menu {
         margin: 20px 0;
+        .search-form {
+          flex-direction: column-reverse;
 
+          .category {
+            border-right: 0;
+            border-top: 1px solid $form-border-color;
+          }
+        }
         .hamburger {
           display: inline;
         }
