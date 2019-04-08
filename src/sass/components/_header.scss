@@ -174,17 +174,18 @@ header {
           height: 45px;
           position: relative;
 
-          i:first-child {
-            color: $primary;
+          i:first-child,
+          i:last-child {
             position: absolute;
-            left: 10px;
             z-index: 0;
           }
 
+          i:first-child {
+            color: $primary;
+            left: 10px;
+          }
           i:last-child {
-            position: absolute;
             right: 10px;
-            z-index: 0;
           }
 
           select {
@@ -205,7 +206,7 @@ header {
           height: 45px;
           position: relative;
 
-          input {
+          .search-field-input {
             border: 0;
             padding-left: 10px;
             font-size: 14px;
