@@ -12,6 +12,7 @@ header {
         line-height: 55px;
 
         a {
+          @extend %animated-element;
           color: #ffffff;
           font-size: 13px;
 
@@ -72,6 +73,7 @@ header {
         color: #ffffff;
 
         .cart-icon {
+          @extend %animated-element;
           background-color: $primary;
           width: 55px;
           height: 50px;
@@ -134,6 +136,7 @@ header {
           align-items: stretch;
 
           a {
+            @extend %animated-element;
             color: $text-color;
             text-transform: uppercase;
             font-size: 12px;
