@@ -89,3 +89,15 @@
     }
   }
 }
+.carousel {
+  margin: 0 auto;
+  padding: 5px;
+}
+.carousel-indicators > li.active {
+  background-color: $primary;
+}
+.carousel-indicators > li {
+  width: 13px;
+  height: 13px;
+  border-radius: 6px;
+}

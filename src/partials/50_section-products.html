@@ -13,14 +13,71 @@
           </ul>
         </div>
         <div class="col-auto dots">
-          <ul>
-            <li><a href="#" class="active"></a></li>
-            <li><a href="#"></a></li>
-            <li><a href="#"></a></li>
+          <ul class="">
+            <li><a href="#beds" data-slide-to="0" class="active"></a></li>
+            <li><a href="#beds" data-slide-to="1"></a></li>
+            <li><a href="#beds" data-slide-to="2"></a></li>
+            <li><a href="#beds" data-slide-to="3"></a></li>
           </ul>
         </div>
       </div>
     </div>
+
+    <h2>This is a heading</h2>
+
+    <p>This is a paragraph.</p>
+    <p id="test">This is another paragraph.</p>
+
+    <button onclick="alert('Hello')">Click me to hide paragraphs</button>
+    <p id="demo"></p>
+    <div class="row col-lg-12">
+      <div id="beds" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ul id="fff" class="carousel-indicators">
+          <li data-target="#beds" data-slide-to="0" class="active"></li>
+          <li data-target="#beds" data-slide-to="1"></li>
+          <li data-target="#beds" data-slide-to="2"></li>
+          <li data-target="#beds" data-slide-to="3"></li>
+        </ul>
+
+        <!-- The slideshow -->
+        <div class="carousel-inner" role="listbox">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-lg-6"><img src="/images/beds/bed01.png" alt="" /></div>
+              <div class="col-lg-6"><img src="/images/beds/bed02.png" alt="" /></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-lg-6"><img src="/images/beds/bed03.png" alt="" /></div>
+              <div class="col-lg-6"><img src="/images/beds/bed04.png" alt="" /></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-lg-6"><img src="/images/beds/bed05.png" alt="" /></div>
+              <div class="col-lg-6"><img src="/images/beds/bed06.png" alt="" /></div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-lg-6"><img src="/images/beds/bed07.png" alt="" /></div>
+              <div class="col-lg-6"><img src="/images/beds/bed08.png" alt="" /></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="carousel-control-prev" href="#beds" data-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#beds" data-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </a>
+      </div>
+    </div>
+
     <div class="row">
       <div class="col-3">
         <div class="product-box">
