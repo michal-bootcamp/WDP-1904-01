@@ -1,6 +1,6 @@
 console.log('hello');
 
-const outlinesButtons = document.querySelectorAll('.outlines .btn-outline');
+const outlinesButtons = document.querySelectorAll('.btn-outline');
 
 outlinesButtons.forEach(function (button) {
   button.addEventListener('click', function (event) {
