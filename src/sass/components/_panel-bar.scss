@@ -1,3 +1,32 @@
+@mixin dots {
+  ul {
+    margin: 0;
+    padding: 0 0 0 1rem;
+    list-style: none;
+    background-color: #ffffff;
+    transform: translateY(15px);
+
+    li {
+      display: inline-block;
+      margin-left: 0.5rem;
+
+      a {
+        @extend %animated-element;
+        display: block;
+        width: 13px;
+        height: 13px;
+        border-radius: 6px;
+        background-color: #e1e1e1;
+
+        &.active,
+        &:hover {
+          background-color: $primary;
+        }
+      }
+    }
+  }
+}
+
 .panel-bar {
   margin-bottom: 30px;
 
@@ -62,31 +91,6 @@
   }
 
   .dots {
-    ul {
-      margin: 0;
-      padding: 0 0 0 1rem;
-      list-style: none;
-      background-color: #ffffff;
-      transform: translateY(15px);
-
-      li {
-        display: inline-block;
-        margin-left: 0.5rem;
-
-        a {
-          @extend %animated-element;
-          display: block;
-          width: 13px;
-          height: 13px;
-          border-radius: 6px;
-          background-color: #e1e1e1;
-
-          &.active,
-          &:hover {
-            background-color: $primary;
-          }
-        }
-      }
-    }
+    @include dots;
   }
 }
