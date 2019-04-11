@@ -9,11 +9,11 @@
   }
 
   .image-box {
-    height: 200px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    height: 170px;
     &.large {
       height: 400px;
+      padding-top: 15px;
+      padding-bottom: 15px;
     }
     .image {
       background-size: cover;
@@ -47,15 +47,20 @@
         }
       }
     }
-    &.small-top .image {
-      position: relative;
+    &.small-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: $lightblue-bg;
+      margin-top: 15px;
+      margin-bottom: 30px;
 
+      .image {
+        width: 30%;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
       .image-description {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
         h3 {
           span {
             font-weight: 300;
@@ -73,15 +78,21 @@
         }
       }
     }
-    &.small-bottom .image {
-      position: relative;
+    &.small-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fcf3f8;
+
+      .image {
+        width: 50%;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
 
       .image-description {
+        margin-right: 30px;
         text-align: right;
-        position: absolute;
-        top: 50%;
-        right: 20px;
-        transform: translateY(-50%);
 
         h5 {
           color: $primary;
