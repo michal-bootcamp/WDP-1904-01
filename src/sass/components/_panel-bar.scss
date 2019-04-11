@@ -89,25 +89,29 @@
     }
   }
 }
-.carousel {
+
+.visible-xs {
+  display: none;
+}
+.visible-medium {
+  display: none;
+}
+.visible-large {
+  display: inline-block;
   margin: 0 auto;
   padding: 5px;
 }
-
+.carousel {
+  position: relative;
+}
 .carousel-indicators {
-  /*margin: 0;
-  height: 25px;
-  width: 50px;
-  border: 1px solid;
-  list-style: none;*/
-  bottom: 255px;
-  left: 635px;
+  position: absolute;
+  top: -45px;
+  left: 880px;
   background-color: #ffffff;
   height: 15px;
-  width: 130px;
-  /*border: 1px solid;*/
+  width: 80px;
 }
-
 .carousel-indicators > li.active {
   background-color: $primary;
 }
@@ -117,7 +121,81 @@
   border-radius: 6px;
   background-color: #e1e1e1;
   margin-left: 0.6rem;
+}
 
-  /*  bottom: 230px;
-  left: 522px;*/
+@media only screen and (max-width: 1199px) {
+  .visible-xs {
+    display: none;
+  }
+  .visible-large {
+    display: none;
+  }
+  .visible-medium {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 5px;
+  }
+  .carousel {
+    position: relative;
+  }
+  .carousel-indicators {
+    position: absolute;
+    top: -45px;
+    left: 555px;
+    background-color: #ffffff;
+    height: 15px;
+    width: 130px;
+  }
+  .carousel-indicators > li.active {
+    background-color: $primary;
+  }
+  .carousel-indicators > li {
+    width: 13px;
+    height: 13px;
+    border-radius: 6px;
+    background-color: #e1e1e1;
+    margin-left: 0.6rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .carousel-indicators {
+    left: 450px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .carousel-indicators {
+    left: 97px;
+    top: -25px;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .visible-medium {
+    display: none;
+  }
+  .visible-large {
+    display: none;
+  }
+  .visible-xs {
+    display: inline-block;
+    margin: 0 auto;
+    padding: 5px;
+  }
+  .carousel-indicators {
+    position: absolute;
+    list-style: none;
+    top: -25px;
+    left: 0;
+    width: 200px;
+  }
+  .carousel-indicators > li.active {
+    background-color: $primary;
+  }
+  .carousel-indicators > li {
+    width: 13px;
+    height: 13px;
+    border-radius: 6px;
+  }
 }

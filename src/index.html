@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Furnitures shop</title>
     <link rel="stylesheet" href="./sass/style.scss" />
+
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="//code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
   </head>
 
   <body>
@@ -19,7 +22,38 @@
 
     <include src="90_footer.html"></include>
 
-    <script src="./scripts/bootstrap.min.js"></script>
     <script src="./scripts/app.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./scripts/bootstrap.min.js"></script>
+
+    <script>
+      var touchSensitivity = 5;
+      $(".carousel").on("touchstart", function(event) {
+        var xClick = event.originalEvent.touches[0].pageX;
+        $(this).one("touchmove", function(event) {
+          var xMove = event.originalEvent.touches[0].pageX;
+          if (Math.floor(xClick - xMove) > touchSensitivity) {
+            $(this).carousel("next");
+          } else if (Math.floor(xClick - xMove) < -touchSensitivity) {
+            $(this).carousel("prev");
+          }
+        });
+        $(".carousel").on("touchend", function() {
+          $(this).off("touchmove");
+        });
+      });
+    </script>
   </body>
 </html>
