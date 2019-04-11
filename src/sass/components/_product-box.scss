@@ -5,7 +5,7 @@
 
   .photo {
     position: relative;
-    padding: 80% 10px 0 10px;
+    padding: calc(80% + 34px) 10px 0 10px;
     background: {
       color: #f4f5f7;
       size: contain;
@@ -27,8 +27,21 @@
     }
 
     .buttons {
-      display: flex;
       justify-content: space-between;
+      display: none;
+    }
+  }
+
+  &:hover {
+    .buttons {
+      display: flex;
+    }
+
+    .photo {
+      padding: 80% 10px 0 10px;
+    }
+    .price {
+      background-color: $primary;
     }
   }
 
