@@ -1,3 +1,16 @@
 .product-box {
   @extend %product-box;
+
+  &:hover {
+    .buttons {
+      display: flex;
+    }
+
+    .photo {
+      padding: 80% 10px 0 10px;
+    }
+    .price {
+      background-color: $primary;
+    }
+  }
 }
