@@ -1,5 +1,5 @@
 .product-box-featured {
-  @include product-box;
+  @extend %product-box;
   margin-bottom: 0;
 
   .photo {
@@ -21,7 +21,7 @@
       width: 100%;
 
       .dots {
-        @include dots;
+        @extend %dots;
         display: inline-block;
 
         ul {
