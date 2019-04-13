@@ -76,16 +76,17 @@
     background-color: #ffffff;
     transform: translateY(15px);
 
+
     li {
       display: inline-block;
-      margin-left: 0.5rem;
 
       a {
-        display: block;
-        width: 13px;
-        height: 13px;
-        border-radius: 6px;
-        background-color: #e1e1e1;
+          @extend %animated-element;
+          display: block;
+          width: 13px;
+          height: 13px;
+          border-radius: 6px;
+          background-color: #e1e1e1;
 
         &:hover,
         &.active {
