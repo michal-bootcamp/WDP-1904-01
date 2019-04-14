@@ -31,6 +31,30 @@
   }
 }
 
+%dots-slider {
+  position: absolute;
+  top: -37px;
+  right: 20px;
+  bottom: unset;
+  left: unset;
+  margin: 0;
+
+  li {
+    @extend %animated-element;
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border-radius: 6px;
+    background-color: #e1e1e1;
+    margin: 0 5px;
+
+    &.active,
+    &:hover {
+      background-color: $primary;
+    }
+  }
+}
+
 %product-box {
   background-color: #ffffff;
   border: 1px solid #e1e1e1;
