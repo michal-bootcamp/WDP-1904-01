@@ -1,3 +1,4 @@
+/* eslint-env jquery */
 console.log('hello');
 
 const outlinesButtons = document.querySelectorAll('.btn-outline');
@@ -9,6 +10,4 @@ outlinesButtons.forEach(function (button) {
   });
 });
 
-/*
-$("[data-toggle='tooltip']").tooltip();
-*/
+$('[data-toggle="tooltip"]').tooltip();
