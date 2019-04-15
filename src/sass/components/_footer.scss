@@ -2,7 +2,9 @@ footer {
   .footer-menu {
     background-color: $footer-bg;
     padding: 3rem 0;
-
+    .col-12 {
+      text-align: center;
+    }
     .menu-wrapper {
       h6 {
         color: #ffffff;
@@ -16,6 +18,7 @@ footer {
         list-style: none;
         li {
           a {
+            @extend %animated-element;
             font-size: 14px;
             line-height: 30px;
             color: rgb(169, 169, 169);
@@ -52,10 +55,14 @@ footer {
         color: rgb(169, 169, 169);
         font-size: 14px;
         line-height: 26px;
+        text-align: left;
       }
     }
-
+    .empty-space {
+      text-align: center;
+    }
     .socialmedia {
+      text-align: right;
       ul {
         margin: 0;
         padding: 0;
@@ -66,6 +73,7 @@ footer {
           margin-left: 1rem;
 
           a {
+            @extend %animated-element;
             color: rgb(169, 169, 169);
             text-decoration: none;
 
