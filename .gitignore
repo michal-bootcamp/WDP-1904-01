@@ -1,5 +1,7 @@
 .idea/
 dist/
+src/images/beds/Thumbs.db
+src/images/blog/Thumbs.db
 
 # Created by https://www.gitignore.io/api/node
 
