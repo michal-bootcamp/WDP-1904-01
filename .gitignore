@@ -1,5 +1,6 @@
 .idea/
 dist/
+.eslintrc.js
 
 # Created by https://www.gitignore.io/api/node
 

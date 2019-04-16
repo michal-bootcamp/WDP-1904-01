@@ -1,4 +1,11 @@
-console.log('hello');
+/*
+console.log('$:', $);
+console.log('jQuery:', jQuery);
+
+$(function() {
+  console.log('jQuery is fully ready to work!');
+});
+*/
 /*
 var touchSensitivity = 5;
 $('.carousel').on('touchstart', function(event) {
@@ -17,26 +24,29 @@ $('.carousel').on('touchstart', function(event) {
 });
 */
 /*
-$('.carousel[data-type="multi"] .item').each(function() {
-  var next = $(this).next();
-  if (!next.length) {
-    next = $(this).siblings(':first');
-  }
-  next
-    .children(':first-child')
-    .clone()
-    .appendTo($(this));
-
-  for (var i = 0; i < 2; i++) {
-    next = next.next();
+$(document).ready(function () {
+  $('.carousel[data-type="multi"] .item').each(function () {
+    var next = $(this).next();
     if (!next.length) {
       next = $(this).siblings(':first');
     }
-
     next
       .children(':first-child')
       .clone()
       .appendTo($(this));
-  }
+
+    for (var i = 0; i < 2; i++) {
+      next = next.next();
+      if (!next.length) {
+        next = $(this).siblings(':first');
+      }
+
+      next
+        .children(':first-child')
+        .clone()
+        .appendTo($(this));
+    }
+  });
+  console.log('test');
 });
 */
