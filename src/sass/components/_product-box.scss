@@ -61,10 +61,7 @@
       flex-direction: row-reverse;
       justify-content: center;
       .star {
-        text-decoration: none;
         color: rgb(42, 42, 42);
-        margin: 0 -4px;
-        padding: 0 4px;
         @extend .far;
         @extend .fa-star;
 
