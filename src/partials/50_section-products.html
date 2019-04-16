@@ -14,64 +14,8 @@
         </div>
       </div>
     </div>
-    <!--
-    <!-- Large carousel 
-    <div class="row">
-      <div class="visible-large">
-        <div id="bedsL" class="carousel slide" data-ride="carousel">
-          <!-- Indicators 
-          <ul class="carousel-indicators">
-            <li data-target="#bedsL" data-slide-to="0" class="active"></li>
-            <li data-target="#bedsL" data-slide-to="1"></li>
-          </ul>
-          <!-- The slideshow 
-          <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-              <div class="row">
-                <div class="col-xl-3">
-                  <img class="img-fluid" src="/images/beds/bed01.png" alt="" />
-                </div>
-                <div class="col-xl-3">
-                  <img class="img-fluid" src="/images/beds/bed02.png" alt="" />
-                </div>
-                <div class="col-xl-3">
-                  <img class="img-fluid" src="/images/beds/bed03.png" alt="" />
-                </div>
-                <div class="col-xl-3">
-                  <img class="img-fluid" src="/images/beds/bed04.png" alt="" />
-                </div>
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="row">
-                <div class="col-xl-3">
-                  <img class="img-fluid" src="/images/beds/bed05.png" alt="" />
-                </div>
-                <div class="col-xl-3">
-                  <img class="img-fluid" src="/images/beds/bed06.png" alt="" />
-                </div>
-                <div class="col-xl-3">
-                  <img class="img-fluid" src="/images/beds/bed07.png" alt="" />
-                </div>
-                <div class="col-xl-3">
-                  <img class="img-fluid" src="/images/beds/bed08.png" alt="" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <!-- Left and right controls 
-          <a class="carousel-control-prev" href="#bedsL" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-          </a>
-          <a class="carousel-control-next" href="#bedsL" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-          </a>
-        </div>
-      </div>
-    </div>
-  -->
 
-    <!-- Medium carousel -->
+    <!-- Carousel -->
     <div class="row">
       <div class="col-12 col-md-12 col-ls-12 col-xl-12 centered">
         <div
@@ -82,14 +26,14 @@
         >
           <!-- Indicators -->
           <ul class="carousel-indicators">
-            <li data-target="#carousel" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel" data-slide-to="1"></li>
-            <li data-target="#carousel" data-slide-to="2"></li>
-            <li data-target="#carousel" data-slide-to="3"></li>
-            <li data-target="#carousel" data-slide-to="4"></li>
-            <li data-target="#carousel" data-slide-to="5"></li>
-            <li data-target="#carousel" data-slide-to="6"></li>
-            <li data-target="#carousel" data-slide-to="7"></li>
+            <li id="0" data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li id="1" class="hidden" data-target="#carousel" data-slide-to="1"></li>
+            <li id="2" data-target="#carousel" data-slide-to="2"></li>
+            <li id="3" class="hidden" data-target="#carousel" data-slide-to="3"></li>
+            <li id="4" data-target="#carousel" data-slide-to="4"></li>
+            <li id="5" class="hidden" data-target="#carousel" data-slide-to="5"></li>
+            <li id="6" data-target="#carousel" data-slide-to="6"></li>
+            <li id="7" class="hidden" data-target="#carousel" data-slide-to="7"></li>
           </ul>
           <!-- The slideshow -->
           <div
@@ -97,42 +41,42 @@
             role="listbox"
           >
             <div class="row">
-              <div class="carousel-item active">
+              <div id="a" class="carousel-item active">
                 <div class="carousel-col">
                   <img class="img-fluid" src="/images/beds/bed01.png" alt="" />
                 </div>
               </div>
-              <div class="carousel-item">
+              <div id="b" class="carousel-item">
                 <div class="carousel-col">
                   <img class="img-fluid" src="/images/beds/bed02.png" alt="" />
                 </div>
               </div>
-              <div class="carousel-item">
+              <div id="c" class="carousel-item">
                 <div class="carousel-col">
                   <img class="img-fluid" src="/images/beds/bed03.png" alt="" />
                 </div>
               </div>
-              <div class="carousel-item">
+              <div id="d" class="carousel-item">
                 <div class="carousel-col">
                   <img class="img-fluid" src="/images/beds/bed04.png" alt="" />
                 </div>
               </div>
-              <div class="carousel-item">
+              <div id="e" class="carousel-item">
                 <div class="carousel-col">
                   <img class="img-fluid" src="/images/beds/bed05.png" alt="" />
                 </div>
               </div>
-              <div class="carousel-item">
+              <div id="f" class="carousel-item">
                 <div class="carousel-col">
                   <img class="img-fluid" src="/images/beds/bed06.png" alt="" />
                 </div>
               </div>
-              <div class="carousel-item">
+              <div id="g" class="carousel-item">
                 <div class="carousel-col">
                   <img class="img-fluid" src="/images/beds/bed07.png" alt="" />
                 </div>
               </div>
-              <div class="carousel-item">
+              <div id="h" class="carousel-item">
                 <div class="carousel-col">
                   <img class="img-fluid" src="/images/beds/bed08.png" alt="" />
                 </div>
@@ -149,77 +93,62 @@
         </div>
       </div>
     </div>
-    <!-- Small carousel
-    <div class="row col-12">
-      <div class="visible-xs">
-        <div id="bedsS" class="carousel slide" data-ride="carousel">
-          <!-- Indicators 
+
+    <!-- Small carousel 
+    <div class="row">
+      <div class="centered">
+        <div id="bedsS" class="carousel slide" data-ride="carousel" data-type="multi">
+          <!-- Indicators -
           <ul class="carousel-indicators">
             <li data-target="#bedsS" data-slide-to="0" class="active"></li>
             <li data-target="#bedsS" data-slide-to="1"></li>
-            <li data-target="#bedsS" data-slide-to="2"></li>
-            <li data-target="#bedsS" data-slide-to="3"></li>
-            <li data-target="#bedsS" data-slide-to="4"></li>
-            <li data-target="#bedsS" data-slide-to="5"></li>
-            <li data-target="#bedsS" data-slide-to="6"></li>
-            <li data-target="#bedsS" data-slide-to="7"></li>
           </ul>
           <!-- The slideshow 
-          <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active">
-              <div class="col-12">
-                <img class="img-fluid" src="/images/beds/bed01.png" alt="" />
+          <div
+            class="carousel-inner w-100 col-12 col-md-12 col-lg-12 col-xl-12"
+            role="listbox"
+          >
+            <div class="row large">
+              <div class="carousel-item active">
+                <div class="col-3 col-md-3 col-lg-3 col-xl-3 float-left">
+                  <img class="img-fluid" src="/images/beds/bed01.png" alt="" />
+                </div>
+                <div class="col-3 col-md-3 col-lg-3 col-xl-3 float-left">
+                  <img class="img-fluid" src="/images/beds/bed02.png" alt="" />
+                </div>
+                <div class="col-3 col-md-3 col-lg-3 col-xl-3 float-left">
+                  <img class="img-fluid" src="/images/beds/bed03.png" alt="" />
+                </div>
+                <div class="col-3 col-md-3 col-lg-3 col-xl-3 float-left">
+                  <img class="img-fluid" src="/images/beds/bed04.png" alt="" />
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="col-3 col-md-3 col-lg-3 col-xl-3 float-left">
+                  <img class="img-fluid" src="/images/beds/bed05.png" alt="" />
+                </div>
+                <div class="col-3 col-md-3 col-lg-3 col-xl-3 float-left">
+                  <img class="img-fluid" src="/images/beds/bed06.png" alt="" />
+                </div>
+                <div class="col-3 col-md-3 col-lg-3 col-xl-3 float-left">
+                  <img class="img-fluid" src="/images/beds/bed07.png" alt="" />
+                </div>
+                <div class="col-3 col-md-3 col-lg-3 col-xl-3 float-left">
+                  <img class="img-fluid" src="/images/beds/bed08.png" alt="" />
+                </div>
               </div>
             </div>
-            <div class="carousel-item">
-              <div class="col-12">
-                <img class="img-fluid" src="/images/beds/bed02.png" alt="" />
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="col-12">
-                <img class="img-fluid" src="/images/beds/bed03.png" alt="" />
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="col-12">
-                <img class="img-fluid" src="/images/beds/bed04.png" alt="" />
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="col-12">
-                <img class="img-fluid" src="/images/beds/bed05.png" alt="" />
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="col-12">
-                <img class="img-fluid" src="/images/beds/bed06.png" alt="" />
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="col-12">
-                <img class="img-fluid" src="/images/beds/bed07.png" alt="" />
-              </div>
-            </div>
-            <div class="carousel-item">
-              <div class="col-12">
-                <img class="img-fluid" src="/images/beds/bed08.png" alt="" />
-              </div>
-            </div>
+
+            <a class="carousel-control-prev" href="#bedsS" data-slide="prev">
+              <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#bedsS" data-slide="next">
+              <span class="carousel-control-next-icon"></span>
+            </a>
           </div>
-          
-          <a class="carousel-control-prev" href="#bedsS" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-          </a>
-          <a class="carousel-control-next" href="#bedsS" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
-          </a>
         </div>
       </div>
     </div>
-  </div>
-</div>
--->
 
     <!--
     <div class="row">

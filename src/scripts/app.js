@@ -1,32 +1,27 @@
 /* global $ */
 
-console.log('$:', $);
-console.log('jQuery:', jQuery);
-
-$(function() {
-  console.log('jQuery is fully ready to work!');
-});
-
-/*
-var touchSensitivity = 5;
-$('.carousel').on('touchstart', function(event) {
-  var xClick = event.originalEvent.touches[0].pageX;
-  $(this).one('touchmove', function(event) {
-    var xMove = event.originalEvent.touches[0].pageX;
-    if (Math.floor(xClick - xMove) > touchSensitivity) {
-      $(this).carousel('next');
-    } else if (Math.floor(xClick - xMove) < -touchSensitivity) {
-      $(this).carousel('prev');
-    }
-  });
-  $('.carousel').on('touchend', function() {
-    $(this).off('touchmove');
+/* Touchscreen ability */
+$(document).ready(function () {
+  var touchSensitivity = 5;
+  $('.carousel').on('touchstart', function (event) {
+    var xClick = event.originalEvent.touches[0].pageX;
+    $(this).one('touchmove', function (event) {
+      var xMove = event.originalEvent.touches[0].pageX;
+      if (Math.floor(xClick - xMove) > touchSensitivity) {
+        $(this).carousel('next');
+      } else if (Math.floor(xClick - xMove) < -touchSensitivity) {
+        $(this).carousel('prev');
+      }
+    });
+    $('.carousel').on('touchend', function () {
+      $(this).off('touchmove');
+    });
   });
 });
-*/
 
-$(document).ready(function() {
-  $('.carousel[data-type="multi"] .item').each(function() {
+/* Carousel RWD */
+$(document).ready(function () {
+  $('.carousel[data-type="multi"] .carousel-item').each(function () {
     var next = $(this).next();
     if (!next.length) {
       next = $(this).siblings(':first');
@@ -48,5 +43,46 @@ $(document).ready(function() {
         .appendTo($(this));
     }
   });
-  console.log('test');
+});
+
+/* Carousel indicators RWD */
+$(document).ready(function () {
+  $('#carousel').on('slid.bs.carousel', function (e) {
+    if ($(window).width() > 992) {
+      if ($('#1').hasClass('active')) {
+        $('#1').removeClass('active');
+        $('#0').addClass('active');
+      } else if ($('#3').hasClass('active')) {
+        $('#3').removeClass('active');
+        $('#2').addClass('active');
+      } else if ($('#5').hasClass('active')) {
+        $('#5').removeClass('active');
+        $('#4').addClass('active');
+      } else if ($('#7').hasClass('active')) {
+        $('#7').removeClass('active');
+        $('#6').addClass('active');
+      }
+    }
+    if ($(window).width() < 992) {
+      if ($('#1').hasClass('active')) {
+        $('#1').removeClass('active');
+        $('#0').addClass('active');
+      } else if ($('#3').hasClass('active')) {
+        $('#3').removeClass('active');
+        $('#2').addClass('active');
+      } else if ($('#5').hasClass('active')) {
+        $('#5').removeClass('active');
+        $('#4').addClass('active');
+      } else if ($('#7').hasClass('active')) {
+        $('#7').removeClass('active');
+        $('#6').addClass('active');
+      }
+    }
+    if ($(window).width() < 576) {
+      $('#1').removeClass('hidden');
+      $('#3').removeClass('hidden');
+      $('#5').removeClass('hidden');
+      $('#7').removeClass('hidden');
+    }
+  });
 });
