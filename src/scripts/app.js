@@ -12,9 +12,9 @@ outlinesButtons.forEach(function (button) {
 // WDP190401-19
 let stars = document.querySelectorAll('.stars');
 
-var getSiblings = function (elem) {
-  var siblings = [];
-  var sibling = elem.parentNode.firstChild;
+const getSiblings = function (elem) {
+  let siblings = [];
+  let sibling = elem.parentNode.firstChild;
 
   while (sibling) {
     if (sibling.nodeType === 1 && sibling !== elem) {
@@ -28,10 +28,10 @@ var getSiblings = function (elem) {
 
 stars.forEach(function (singleRating) {
   singleRating.addEventListener('click', function (event) {
-    let elem = event.target;
+    const elem = event.target;
     let siblings = getSiblings(elem);
 
-    for (var i = 0; i < siblings.length; i++) {
+    for (let i = 0; i < siblings.length; i++) {
       siblings[i].classList.remove('full');
     }
 
