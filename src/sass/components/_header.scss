@@ -1,7 +1,8 @@
 header {
   .top-bar {
     background-color: $header-topbar-bg;
-
+    position: relative;
+    z-index: 1;
     ul {
       list-style: none;
       margin: 0;
@@ -25,26 +26,39 @@ header {
 
     .text-left ul li {
       margin-right: 1.5rem;
-
       i {
         margin-left: 5px;
       }
     }
-
-    .text-left ul ul li {
-      display: block;
+    .text-left ul li ul li a {
+      color: #000;
+      margin-top: 5px;
+      padding: 0 5px;
+      height: 50px;
+      display: flex;
+      &:hover {
+        color: #fff;
+      }
+    }
+    .text-left ul li ul li {
       display: none;
     }
-
     .text-left ul li ul {
       position: absolute;
-      background-color: #864343;
+      background-color: #fff;
+      box-shadow: 0 0 5px 0 #000;
     }
     .text-left ul li:hover ul li {
       display: block;
-      height: 17px;
+      height: 25px;
       line-height: 3px;
       padding: 7px;
+      width: auto;
+    }
+    .text-left ul li ul li:hover {
+      background-color: $primary;
+      width: 100%;
+      color: #fff;
     }
 
     .text-right ul li {
