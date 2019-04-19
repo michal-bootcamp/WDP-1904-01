@@ -2,7 +2,7 @@
   <div class="top-bar">
     <div class="container">
       <div class="row">
-        <div class="col text-left">
+        <div class="col-8 col-sm-6 text-left">
           <ul>
             <li>
               <a href="#">USD <i class="fas fa-caret-down"></i></a>
@@ -30,7 +30,7 @@
             </li>
           </ul>
         </div>
-        <div class="col text-right">
+        <div class="col-4 col-sm-6 text-right">
           <ul>
             <li>
               <a href="#"><i class="fas fa-user"></i> Login</a>
@@ -49,7 +49,7 @@
   <div class="company-claim">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col text-left phone-number">
+        <div class="col-12 col-sm-4 text-left phone-number">
           <p><i class="fas fa-mobile-alt"></i> 2345 - 3560 - 222</p>
         </div>
         <div class="col text-center">
@@ -71,8 +71,16 @@
           <form action="" class="search-form">
             <div class="category">
               <i class="fas fa-list-ul"></i>
-              <select name="" id="">
-                <option value="">Select a category</option>
+              <select name="select-category" id="select-category">
+                <option value="select-a-category" disabled selected
+                  >Select a category</option
+                >
+                <option value="all">All</option>
+                <option value="bed">Bed</option>
+                <option value="chair">Chair</option>
+                <option value="sofa">Sofa</option>
+                <option value="table">Table</option>
+                <option value="dining">Dining</option>
               </select>
               <i class="fas fa-caret-down"></i>
             </div>

@@ -13,6 +13,7 @@ header {
         line-height: 55px;
 
         a {
+          @extend %animated-element;
           color: #ffffff;
           font-size: 13px;
 
@@ -26,6 +27,9 @@ header {
 
     .text-left ul li {
       margin-right: 1.5rem;
+      @media (max-width: 767px) {
+        margin-right: 0.4rem;
+      }
       i {
         margin-left: 5px;
       }
@@ -64,6 +68,13 @@ header {
     .text-right ul li {
       margin-left: 1.5rem;
 
+      @media (max-width: 767px) {
+        width: 12px;
+        height: 34px;
+        overflow: hidden;
+        margin-left: 0.5rem;
+      }
+
       i {
         margin-right: 5px;
       }
@@ -78,6 +89,11 @@ header {
     }
 
     .phone-number {
+      @media (max-width: 767px) {
+        order: 1;
+        align-self: flex-start;
+      }
+
       p {
         margin: 0;
         font-size: 17px;
@@ -85,23 +101,38 @@ header {
         color: rgb(216, 216, 216);
         font-weight: 500;
 
+        @media (max-width: 767px) {
+          font-size: 14px;
+          text-align: right;
+        }
+
         i {
           font-size: 32px;
           color: $primary;
           vertical-align: middle;
           margin-top: -3px;
           margin-right: 0.8rem;
+
+          @media (max-width: 767px) {
+            font-size: 25px;
+          }
         }
       }
     }
 
     .cart {
+      @media (max-width: 767px) {
+        align-self: flex-start;
+        padding-top: 10px;
+      }
+
       .cart-box {
         display: inline-block;
         position: relative;
         color: #ffffff;
 
         .cart-icon {
+          @extend %animated-element;
           background-color: $primary;
           width: 55px;
           height: 50px;
@@ -112,24 +143,25 @@ header {
           font-size: 20px;
 
           i {
-            margin-right: 5px;
+            margin-left: 5px;
           }
         }
 
         .cart-counter {
+          padding-right: 7px;
           width: 28px;
           height: 27px;
           border-radius: 14px;
           background-color: $header-bg;
           display: flex;
           align-items: center;
-          justify-content: center;
+          justify-content: flex-end;
           font-size: 14px;
           color: rgb(224, 227, 237);
           position: absolute;
           top: 50%;
           right: 0;
-          transform: translate(50%, -50%);
+          transform: translate(-150%, -50%);
         }
 
         &:hover {
@@ -164,6 +196,7 @@ header {
           align-items: stretch;
 
           a {
+            @extend %animated-element;
             color: $text-color;
             text-transform: uppercase;
             font-size: 12px;
@@ -225,6 +258,23 @@ header {
           position: relative;
           z-index: 1;
         }
+        &:hover {
+          background-color: $primary;
+
+          i:first-child,
+          i:last-child {
+            color: #fff;
+          }
+          select {
+            color: #fff;
+            option {
+              background-color: $primary;
+            }
+            option[disabled] {
+              display: none;
+            }
+          }
+        }
       }
 
       .search-field {
@@ -239,7 +289,7 @@ header {
           outline: none;
 
           &::placeholder {
-            color: $text-color;
+            color: #a4a4a4;
           }
         }
 
@@ -247,6 +297,11 @@ header {
           border: 0;
           background-color: transparent;
           outline: none;
+          padding-right: 13px;
+
+          &:hover {
+            color: $primary;
+          }
         }
       }
     }
