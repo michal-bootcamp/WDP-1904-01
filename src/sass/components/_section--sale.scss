@@ -15,7 +15,7 @@
       padding-top: 15px;
       padding-bottom: 15px;
     }
-    .image {
+    .large-image {
       background-size: cover;
       background-position: center;
       height: 100%;
@@ -55,12 +55,11 @@
       margin-top: 15px;
       margin-bottom: 30px;
 
-      .image {
+      .top-image {
+        @extend %sale-image;
         width: 30%;
-        background-size: contain;
-        background-repeat: no-repeat;
       }
-      .image-description {
+      .top-image-description {
         h3 {
           span {
             font-weight: 300;
@@ -84,13 +83,12 @@
       align-items: center;
       background-color: #fcf3f8;
 
-      .image {
+      .bottom-image {
+        @extend %sale-image;
         width: 50%;
-        background-size: contain;
-        background-repeat: no-repeat;
       }
 
-      .image-description {
+      .bottom-image-description {
         margin-right: 30px;
         text-align: right;
 
