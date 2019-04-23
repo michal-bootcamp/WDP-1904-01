@@ -1,54 +1,81 @@
-.post-box {
-  margin-bottom: 2rem;
+a.post-box-link {
+  text-decoration: none;
 
-  .cover {
-    padding: 80% 10px 0 10px;
-    background: {
-      color: #f4f5f7;
-      size: cover;
-      position: center;
-    }
+  .post-box {
+    margin-bottom: 2rem;
 
-    .details {
-      padding: 15px 20px;
-      display: flex;
-      background-color: #ffffff;
-      font-size: 14px;
-
-      & > * {
-        flex: 1 1 auto;
+    .cover {
+      padding: 80% 10px 0 10px;
+      background: {
+        color: #f4f5f7;
+        size: cover;
+        position: center;
       }
 
-      .date {
+      .details {
+        padding: 15px 20px;
+        display: flex;
+        flex-wrap: wrap;
+        visibility: hidden;
+        background-color: #ffffff;
+        font-size: 14px;
+        color: rgb(103, 103, 103);
+
+        & > * {
+          flex: 1 1 auto;
+        }
+
+        .date {
+          text-align: left;
+          padding: 0 3px;
+        }
+
+        .comments {
+          text-align: right;
+          padding: 0 3px;
+          .fa-comments {
+            color: $text-color;
+          }
+        }
+      }
+    }
+
+    .post-info {
+      padding: 25px;
+
+      h5 {
+        color: $text-color;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 1px;
         text-align: left;
       }
 
-      .comments {
-        text-align: right;
+      p {
+        font-size: 14px;
+        line-height: 24px;
+        color: rgb(103, 103, 103);
+        text-align: left;
+      }
+
+      .more {
+        width: 165px;
+        text-align: center;
+        margin: 0 auto;
       }
     }
   }
-
-  .post-info {
-    padding: 25px;
-
-    h5 {
-      color: $primary;
-      font-size: 16px;
-      line-height: 24px;
-      letter-spacing: 1px;
+  &:hover {
+    .cover .details {
+      visibility: visible;
     }
-
-    p {
-      font-size: 14px;
-      line-height: 24px;
-      color: rgb(103, 103, 103);
-      text-align: justify;
-    }
-
-    .more {
-      text-align: center;
-      padding-top: 30px;
+    .post-info {
+      h5 {
+        color: $primary;
+      }
+      .btn-main {
+        background-color: $primary;
+      }
     }
   }
 }
