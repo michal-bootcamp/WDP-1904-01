@@ -96,7 +96,9 @@ header {
         align-self: flex-start;
         padding-top: 10px;
       }
-
+      a.cart-box:hover {
+        text-decoration: none;
+      }
       .cart-box {
         display: inline-block;
         position: relative;
