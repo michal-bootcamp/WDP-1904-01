@@ -40,34 +40,25 @@ $(document).ready(function () {
 /* Carousel indicators RWD */
 $(document).ready(function () {
   $('#blog-carousel').on('slid.bs.carousel', function (e) {
-    if ($(window).width() > 992) {
-      if ($('#1').hasClass('active')) {
-        $('#1').removeClass('active');
-        $('#0').addClass('active');
-      } else if ($('#3').hasClass('active')) {
-        $('#3').removeClass('active');
-        $('#2').addClass('active');
-      } else if ($('#5').hasClass('active')) {
-        $('#5').removeClass('active');
-        $('#4').addClass('active');
-      }
-    }
-    if ($(window).width() < 992) {
-      if ($('#1').hasClass('active')) {
-        $('#1').removeClass('active');
-        $('#0').addClass('active');
-      } else if ($('#3').hasClass('active')) {
-        $('#3').removeClass('active');
-        $('#2').addClass('active');
-      } else if ($('#5').hasClass('active')) {
-        $('#5').removeClass('active');
-        $('#4').addClass('active');
-      }
-    }
     if ($(window).width() < 768) {
       $('#1').removeClass('hidden');
       $('#3').removeClass('hidden');
       $('#5').removeClass('hidden');
+    }
+    if ($(window).width() > 768) {
+      if ($('#1').hasClass('active')) {
+        $('#1').removeClass('active');
+        $('#0').addClass('active');
+      } else if ($('#3').hasClass('active')) {
+        $('#3').removeClass('active');
+        $('#2').addClass('active');
+      } else if ($('#5').hasClass('active')) {
+        $('#5').removeClass('active');
+        $('#4').addClass('active');
+      }
+      $('#1').addClass('hidden');
+      $('#3').addClass('hidden');
+      $('#5').addClass('hidden');
     }
   });
 });

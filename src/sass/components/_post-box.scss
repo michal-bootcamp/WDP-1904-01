@@ -129,7 +129,13 @@ a.post-box-link {
   margin-left: 0.6rem;
 }
 
-@media (min-width: 993px) {
+@media (min-width: 993px) and (max-width: 1200px) {
+  .carousel-indicators {
+    left: 700px;
+  }
+}
+
+@media (min-width: 992px) {
   .carousel-inner .active.left {
     left: -100%;
   }
@@ -175,5 +181,24 @@ a.post-box-link {
   .carousel-indicators {
     left: 115px;
     top: -20px;
+  }
+  .carousel-indicators {
+    left: 495px;
+    top: -40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .carousel-indicators {
+    left: 50%;
+    top: -40px;
+    width: 220px;
+  }
+}
+@media (max-width: 575px) {
+  .carousel-indicators {
+    left: 30%;
+    top: -40px;
+    width: 220px;
   }
 }
