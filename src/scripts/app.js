@@ -44,7 +44,8 @@ galleryBoxes.forEach(function (box) {
       box.querySelector('.image').style.backgroundImage = activeImage;
 
       // set fade animation
-      fadeLayer.style.display = 'block';
+
+      fadeLayer.classList.add('show-fade');
 
       setTimeout(function () {
         fadeLayer.style.backgroundColor = 'transparent';
@@ -52,7 +53,7 @@ galleryBoxes.forEach(function (box) {
 
       setTimeout(function () {
         fadeLayer.style.backgroundColor = '#fff';
-        fadeLayer.style.display = 'none';
+        fadeLayer.classList.remove('show-fade');
       }, 200);
     });
   }

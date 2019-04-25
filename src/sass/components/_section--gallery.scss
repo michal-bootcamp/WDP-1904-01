@@ -230,5 +230,9 @@
     position: absolute;
     left: 0;
     top: 0;
+
+    &.show-fade {
+      display: block;
+    }
   }
 }
