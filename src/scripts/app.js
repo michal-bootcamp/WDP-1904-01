@@ -23,11 +23,27 @@ const fadeLayer = document.querySelector('.fade-layer');
 galleryBoxes.forEach(function (box) {
   const slider = tns({
     container: box.querySelector('.gallery-slider'),
-    items: 6,
     gutter: 10,
     slideBy: 3,
     controlsText: ['', ''],
-    nav: false
+    nav: false,
+    responsive: {
+      '360': {
+        items: 3
+      },
+      '540': {
+        items: 4
+      },
+      '720': {
+        items: 6
+      },
+      '1000': {
+        items: 4
+      },
+      '1300': {
+        items: 6
+      }
+    }
   });
 
   const info = slider.getInfo();
