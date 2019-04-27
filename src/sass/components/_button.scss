@@ -36,3 +36,10 @@
     color: #ffffff;
   }
 }
+.btn-gallery {
+  @extend .btn-main;
+  display: inline-block;
+  background-color: $gallery-green;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
