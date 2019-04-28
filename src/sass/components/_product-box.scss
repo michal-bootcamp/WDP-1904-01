@@ -69,6 +69,12 @@
           @extend .fas;
           color: $primary;
         }
+        &.reviewed {
+          font-weight: 900;
+          ~ .star {
+            font-weight: 900;
+          }
+        }
       }
     }
     .stars > span:hover:before,
