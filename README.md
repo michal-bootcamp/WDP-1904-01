@@ -1,37 +1,41 @@
-# WDP Projekt Zespołowy
+# WDP Team Project
 
-## Opis projektu
+## Project description
 
-DO UZUPEŁNIENIA
+This project is an example of web store based on free PSD template created for web development learning purposes.
 
 ## Demo
 
 https://lucid-heisenberg-a54431.netlify.com/
 
-## Inicjacja projektu
+## Project initialisation
 
-Po sklonowaniu projektu, zainstaluj wymagane paczki komendą `npm install`.
+After cloning the project install all required packages using `npm install` command.
 
-Teraz możesz zacząć pracę, korzystając z przygotowanych zadania `npm run watch`.
+Then you can start your work by firing up `npm run watch` command.
 
-Wszystkie potrzebne do pracy pliki źródłowe znajdują się w folderze `src/`.
+All required source files are located in `src/` folder.
 
 ## NPM Scripts
 
-Dostępne są 3 główne skrypty przyspieszające pracę:
+There are 3 main scripts designed to increase the speed of your work:
 
-- `build`: na bazie plików z folderu `src` buduje project w folderze `dist`
-- `watch`: odpala `browser-sync`, obserwuje zmiany w folderze `src` i przebudowuje projekt
-- `code-quality`: skrypt dokonuje automatycznego formatowania plików w folderze `src/`
-  zgodnie z przyjętą konwencją formatowania kodu i sprawdza błędy w JS.
+- `build`: create a project from the files located in `src` folder
+- `watch`: fire up `browser-sync`, it tracks all changes in `src` folder and remodel the project accordingly
+- `code-quality`: automatically checks JS errors in `src` folder in compliance to the established conventions.
 
 ## Git Hooks
 
-Projekt korzysta z Git Hooks - możliwości uruchamiania skryptów w reakcji na wybrane zdarzenia programu Git.
+Project uses Git Hooks - it gives a possibility to execute scripts after or before some Git events.
 
-Za każdym razem gdy wykonasz komendę `git commit` zostanie uruchomiony skrypt `code-quality`
-dla plików, które zostały wybrane do za-commit'owania.
+It triggers `code-quality` script for all committed files after `git commit` command execution.
 
-## Konwencje i dobre praktyki
+## Conventions and good practices
 
-DO UZUPEŁNIENIA
+Beside project name and branch number/name your commit should contain short description of your work
+
+## Usage
+
+This project has been created for learning purposes. It will utilise your skills in HTML, CSS/SCSS, Bootstrap and JS/jQuery.
+
+## Troubleshooting
