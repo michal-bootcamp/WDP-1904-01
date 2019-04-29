@@ -1,7 +1,9 @@
-.brands-container {
-  @extend .container;
+.section--brands {
   position: relative;
-  padding: 20px 15px;
+  @extend .container;
+}
+
+.brands {
   border-top: 1px solid #cccccc;
   border-bottom: 1px solid #cccccc;
   margin: 60px auto;
@@ -14,15 +16,9 @@
 .slick-slider {
   display: block;
   box-sizing: border-box;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
   user-select: none;
-  -webkit-touch-callout: none;
-  -ms-touch-action: pan-y;
   touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent;
-  padding: 0 30px;
+  padding: 20px 50px;
 }
 
 .slick-list {
@@ -84,9 +80,9 @@
 }
 
 .left {
-  left: 0;
+  left: 15px;
 }
 
 .right {
-  right: 0;
+  right: 15px;
 }
