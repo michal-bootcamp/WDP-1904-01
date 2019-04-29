@@ -32,10 +32,20 @@ It triggers `code-quality` script for all committed files after `git commit` com
 
 ## Conventions and good practices
 
-Beside project name and branch number/name your commit should contain short description of your work
+Branches should be named using the following format:
+
+{project name/number}-{task number}
+
+Each commit should contain project name, branch number and short description of your work.
+
+Commits should follow naming conventions as below:
+
+{project name/number}-{task number}-{short description}
 
 ## Usage
 
 This project has been created for learning purposes. It will utilise your skills in HTML, CSS/SCSS, Bootstrap and JS/jQuery.
 
 ## Troubleshooting
+
+Remember to add jQuery library if you want to tweak Bootstrap components.
