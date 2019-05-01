@@ -79,6 +79,23 @@ a.post-box-link {
     }
   }
 }
+.left {
+  position: absolute;
+  top: 25%;
+  left: -5%;
+  height: 75px;
+}
+.right {
+  position: absolute;
+  top: 25%;
+  right: -5%;
+  height: 75px;
+}
+.carousel-control-prev .carousel-control-prev-icon,
+.carousel-control-next .carousel-control-next-icon {
+  height: 50px;
+  width: 50px;
+}
 .hidden {
   display: none;
 }
@@ -104,6 +121,7 @@ a.post-box-link {
 }
 .carousel-inner {
   width: 100%;
+  margin-left: 5px;
 }
 .carousel-item {
   width: 100%;
@@ -157,6 +175,14 @@ a.post-box-link {
   .active > div:first-child + div + div {
     display: block;
   }
+  .right {
+    top: 18%;
+    right: -2%;
+  }
+  .left {
+    top: 18%;
+    left: -2%;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
@@ -186,6 +212,14 @@ a.post-box-link {
     left: 495px;
     top: -40px;
   }
+  .right {
+    right: -2%;
+    top: 20%;
+  }
+  .left {
+    left: -2%;
+    top: 20%;
+  }
 }
 
 @media (max-width: 767px) {
@@ -194,11 +228,30 @@ a.post-box-link {
     top: -40px;
     width: 220px;
   }
+  .right {
+    top: 30%;
+    right: 2%;
+  }
+  .left {
+    top: 30%;
+    left: 2%;
+  }
 }
 @media (max-width: 575px) {
   .carousel-indicators {
     left: 30%;
     top: -40px;
     width: 220px;
+  }
+  .right {
+    right: 2%;
+    top: 25%;
+  }
+  .left {
+    left: 2%;
+    top: 25%;
+  }
+  .carousel-inner {
+    margin: 0 auto;
   }
 }
