@@ -1,0 +1,107 @@
+.section--sale {
+  margin-bottom: 40px;
+  h1,
+  h2,
+  h3,
+  h5,
+  h6 {
+    text-transform: uppercase;
+  }
+
+  .image-box {
+    height: 170px;
+    &.large {
+      height: 400px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    .large-image {
+      background-size: cover;
+      background-position: center;
+      height: 100%;
+      padding: 30px;
+
+      .layer {
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        color: #fff;
+        padding: 20px;
+        display: flex;
+        align-items: flex-end;
+
+        .layer-content {
+          h2 {
+            margin-bottom: 0;
+          }
+          h1 {
+            font-size: 3rem;
+          }
+          .discount {
+            display: inline-block;
+            padding-left: 10px;
+            padding-right: 10px;
+            font-size: 28px;
+            border: 3px solid #fff;
+          }
+        }
+      }
+    }
+    &.small-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: $lightblue-bg;
+      margin-top: 15px;
+      margin-bottom: 30px;
+
+      .top-image {
+        @extend %sale-image;
+        width: 30%;
+      }
+      .top-image-description {
+        h3 {
+          span {
+            font-weight: 300;
+          }
+        }
+        h6 {
+          font-size: 0.8rem;
+          letter-spacing: 0.2rem;
+        }
+        .price {
+          color: $primary;
+          font-size: 24px;
+          font-weight: bold;
+          margin-bottom: 0;
+        }
+      }
+    }
+    &.small-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #fcf3f8;
+
+      .bottom-image {
+        @extend %sale-image;
+        width: 50%;
+      }
+
+      .bottom-image-description {
+        margin-right: 30px;
+        text-align: right;
+
+        h5 {
+          color: $primary;
+          span {
+            font-weight: 300;
+          }
+        }
+        h6 span {
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}
