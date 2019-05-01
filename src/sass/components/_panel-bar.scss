@@ -61,8 +61,8 @@
       }
     }
   }
-  
-  .dots {
-    @extend %dots;
-  }
+}
+
+.dots {
+  @extend %dots;
 }

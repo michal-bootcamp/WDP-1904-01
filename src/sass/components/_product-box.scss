@@ -13,4 +13,76 @@
       background-color: $primary;
     }
   }
+
+  .line {
+    margin: 0 10px;
+    border-bottom: 1px solid #2a2a2a;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      left: 50%;
+      width: 30px;
+      border-bottom: 4px solid $primary;
+      transform: translateX(-50%);
+    }
+  }
+
+  .actions {
+    padding: 15px 10px 10px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .price-wrapper {
+      display: flex;
+
+      .old-price {
+        font-size: 16px;
+        font-weight: 300;
+        color: $text-color-lightgrey;
+        margin: 0 5px;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &::after {
+          content: "";
+          display: block;
+          width: 100%;
+          height: 1px;
+          background-color: $text-color;
+          position: absolute;
+          left: 0;
+          top: 50%;
+        }
+      }
+    }
+  }
+}
+.content {
+  text-align: center;
+  padding: 20px;
+
+  .product-title {
+    color: $primary;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 1px;
+  }
+
+  .stars {
+    a {
+      text-decoration: none;
+      color: rgb(42, 42, 42);
+      @extend .far;
+      @extend .fa-star;
+
+      &.full {
+        @extend .fas;
+      }
+    }
+  }
 }

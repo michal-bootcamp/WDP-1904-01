@@ -1,4 +1,15 @@
+/* eslint-env jquery */
+
 console.log('hello');
+
+// Menu for mobiles
+
+const hamburger = document.querySelector('.hamburger');
+
+hamburger.addEventListener('click', function (event) {
+  event.preventDefault();
+  document.querySelector('.menu').classList.toggle('show');
+});
 
 const outlinesButtons = document.querySelectorAll('.btn-outline');
 
@@ -7,4 +18,52 @@ outlinesButtons.forEach(function (button) {
     event.preventDefault();
     button.classList.toggle('active');
   });
+});
+
+$('[data-toggle="tooltip"]').tooltip();
+
+// Brands slider
+
+$(document).ready(function () {
+  $('.brands').slick({
+    slidesToShow: 6,
+    slidesToScroll: 6,
+    autoplay: false,
+    arrows: false,
+    dots: false,
+    pauseOnHover: false,
+    prevArrow: $('.prev'),
+    nextArrow: $('.next'),
+    responsive: [
+      {
+        breakpoint: 959,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 520,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+});
+
+$('.left').click(function () {
+  $('.brands').slick('slickPrev');
+});
+
+$('.right').click(function () {
+  $('.brands').slick('slickNext');
 });
