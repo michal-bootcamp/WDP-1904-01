@@ -1,6 +1,17 @@
 import { tns } from '../../node_modules/tiny-slider/src/tiny-slider';
 
+/* eslint-env jquery */
+
 console.log('hello');
+
+// Menu for mobiles
+
+const hamburger = document.querySelector('.hamburger');
+
+hamburger.addEventListener('click', function (event) {
+  event.preventDefault();
+  document.querySelector('.menu').classList.toggle('show');
+});
 
 const outlinesButtons = document.querySelectorAll('.btn-outline');
 
@@ -10,10 +21,6 @@ outlinesButtons.forEach(function (button) {
     button.classList.toggle('active');
   });
 });
-
-/*
-$("[data-toggle='tooltip']").tooltip();
-*/
 
 // gallery sliders
 
@@ -81,4 +88,52 @@ galleryBoxes.forEach(function (box) {
   buttonPrev.innerHTML = '<i class="fas fa-chevron-left">';
   buttonNext.classList.add('next', 'btn-main', 'no-hover');
   buttonNext.innerHTML = '<i class="fas fa-chevron-right">';
+});
+
+$('[data-toggle="tooltip"]').tooltip();
+
+// Brands slider
+
+$(document).ready(function () {
+  $('.brands').slick({
+    slidesToShow: 6,
+    slidesToScroll: 6,
+    autoplay: false,
+    arrows: false,
+    dots: false,
+    pauseOnHover: false,
+    prevArrow: $('.prev'),
+    nextArrow: $('.next'),
+    responsive: [
+      {
+        breakpoint: 959,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 520,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+});
+
+$('.left').click(function () {
+  $('.brands').slick('slickPrev');
+});
+
+$('.right').click(function () {
+  $('.brands').slick('slickNext');
 });
