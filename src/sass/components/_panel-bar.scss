@@ -148,6 +148,14 @@
 .left {
   position: absolute;
   top: 25%;
+  left: -5%;
+  height: 75px;
+}
+.right {
+  position: absolute;
+  top: 25%;
+  right: -5%;
+  height: 75px;
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   .carousel-indicators {
@@ -207,6 +215,12 @@
   .carousel-indicators {
     left: 480px;
   }
+  .left {
+    left: 2%;
+  }
+  .right {
+    right: 2%;
+  }
 }
 
 @media (min-width: 576px) and (max-width: 767px) {
@@ -231,6 +245,12 @@
   .carousel-indicators {
     left: 115px;
     top: -20px;
+  }
+  .left {
+    left: 2%;
+  }
+  .right {
+    right: 2%;
   }
 }
 
@@ -258,5 +278,11 @@
     left: 5%;
     top: -20px;
     width: 225px;
+  }
+  .left {
+    left: 2%;
+  }
+  .right {
+    right: 2%;
   }
 }
