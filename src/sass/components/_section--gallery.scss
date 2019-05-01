@@ -10,13 +10,13 @@
         font-weight: 600;
         border-top-left-radius: 0;
         border-top-right-radius: 0;
-        border: 1px solid #e2e2e2;
+        border: 1px solid $gallery-border-color;
         border-left: 0;
         flex: 1;
         text-align: center;
 
         &:first-child {
-          border-left: 1px solid #e2e2e2;
+          border-left: 1px solid $gallery-border-color;
         }
 
         &.active {
@@ -24,7 +24,7 @@
           background-color: $lightgrey-bg;
           border-bottom: 0;
           border-top: 3px solid $primary;
-          border-right: 1px solid #e2e2e2;
+          border-right: 1px solid $gallery-border-color;
         }
       }
     }
@@ -124,6 +124,7 @@
           }
         }
       }
+
       .gallery-slider-wrapper {
         padding: 0 60px;
         width: 100%;
