@@ -1,4 +1,5 @@
 /* global $ */
+/* eslint-env jquery */
 
 /* Touchscreen ability */
 $(document).ready(function () {
