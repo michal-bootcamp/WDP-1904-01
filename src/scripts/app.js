@@ -111,6 +111,7 @@ $(document).ready(function () {
       $('#5').addClass('hidden');
     }
   });
+}); 
   
 // Brands slider
 $(document).ready(function () {
