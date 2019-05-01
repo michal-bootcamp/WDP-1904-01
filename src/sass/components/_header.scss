@@ -238,6 +238,7 @@ header {
         color: $text-color;
 
         .category {
+          @extend %animated-element;
           height: 40px;
           border-right: 1px solid $form-border-color;
           display: flex;
@@ -305,6 +306,7 @@ header {
             }
           }
           button {
+            @extend %animated-element;
             border: 0;
             background-color: transparent;
             outline: none;
