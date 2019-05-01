@@ -145,6 +145,10 @@
   height: 100%;
 }
 
+.left {
+  position: absolute;
+  top: 25%;
+}
 @media (min-width: 993px) and (max-width: 1200px) {
   .carousel-indicators {
     left: 675px;
