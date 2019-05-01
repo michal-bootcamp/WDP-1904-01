@@ -20,6 +20,8 @@ outlinesButtons.forEach(function (button) {
   });
 });
 
+$('[data-toggle="tooltip"]').tooltip();
+
 // Brands slider
 
 $(document).ready(function () {
