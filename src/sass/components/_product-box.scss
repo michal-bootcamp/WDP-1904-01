@@ -134,3 +134,27 @@
     }
   }
 }
+.content {
+  text-align: center;
+  padding: 20px;
+
+  .product-title {
+    color: $primary;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 1px;
+  }
+
+  .stars {
+    a {
+      text-decoration: none;
+      color: rgb(42, 42, 42);
+      @extend .far;
+      @extend .fa-star;
+
+      &.full {
+        @extend .fas;
+      }
+    }
+  }
+}
