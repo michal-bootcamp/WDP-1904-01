@@ -238,29 +238,29 @@ header {
         color: $text-color;
 
         .category {
+          height: 40px;
           border-right: 1px solid $form-border-color;
           display: flex;
           align-items: center;
-          height: 45px;
           position: relative;
-
-          i:first-child,
-          i:last-child {
-            position: absolute;
-            z-index: 0;
-          }
 
           i:first-child {
             color: $primary;
+            position: absolute;
             left: 10px;
+            z-index: 0;
           }
+
           i:last-child {
+            position: absolute;
             right: 10px;
+            z-index: 0;
           }
 
           select {
             -webkit-appearance: none;
             border: 0;
+            width: 100%;
             background-color: transparent;
             outline: none;
             padding: 5px 30px 5px 35px;
@@ -268,12 +268,29 @@ header {
             position: relative;
             z-index: 1;
           }
+          &:hover {
+            background-color: $primary;
+
+            i:first-child,
+            i:last-child {
+              color: #fff;
+            }
+            select {
+              color: #fff;
+              option {
+                background-color: $primary;
+              }
+              option[disabled] {
+                display: none;
+              }
+            }
+          }
         }
 
         .search-field {
           display: flex;
           align-items: center;
-          height: 45px;
+          height: 40px;
           position: relative;
 
           .search-field-input {
@@ -284,29 +301,17 @@ header {
             max-width: 200px;
 
             &::placeholder {
-              color: $text-color;
+              color: #a4a4a4;
             }
           }
           button {
             border: 0;
             background-color: transparent;
             outline: none;
-          }
-        }
-        &:hover {
-          background-color: $primary;
+            padding-right: 13px;
 
-          i:first-child,
-          i:last-child {
-            color: #fff;
-          }
-          select {
-            color: #fff;
-            option {
-              background-color: $primary;
-            }
-            option[disabled] {
-              display: none;
+            &:hover {
+              color: $primary;
             }
           }
         }
