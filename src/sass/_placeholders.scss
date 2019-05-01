@@ -1,0 +1,9 @@
+%animated-element {
+  transition: background 0.25s, color 0.25s, border-color 0.25s;
+}
+
+%sale-image {
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}

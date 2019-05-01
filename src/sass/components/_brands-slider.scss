@@ -1,0 +1,88 @@
+.section--brands {
+  position: relative;
+  @extend .container;
+}
+
+.brands {
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+  margin: 60px auto;
+}
+
+.slick-slide {
+  margin: 0px 16px;
+}
+
+.slick-slider {
+  display: block;
+  box-sizing: border-box;
+  user-select: none;
+  touch-action: pan-y;
+  padding: 20px 50px;
+}
+
+.slick-list {
+  display: block;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.slick-list:focus {
+  outline: none;
+}
+
+.slick-slide {
+  display: none;
+  float: left;
+  height: 100%;
+  min-height: 1px;
+}
+
+[dir="rtl"] .slick-slide {
+  float: right;
+}
+
+.slick-slide img {
+  display: block;
+}
+
+.slick-initialized .slick-slide {
+  height: 92px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #cccccc;
+}
+
+.slick-arrow.slick-hidden {
+  display: none;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 20px;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  width: 33px;
+  justify-content: center;
+  background: #2a2a2a;
+  color: white;
+  font-size: 13px;
+
+  &:hover {
+    @extend %animated-element;
+    background: $primary;
+    cursor: pointer;
+  }
+}
+
+.left {
+  left: 15px;
+}
+
+.right {
+  right: 15px;
+}
