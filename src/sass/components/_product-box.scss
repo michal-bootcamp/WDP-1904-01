@@ -1,36 +1,5 @@
 .product-box {
-  background-color: #ffffff;
-  border: 1px solid #e1e1e1;
-  margin-bottom: 2rem;
-
-  .photo {
-    position: relative;
-    padding: calc(80% + 34px) 10px 0 10px;
-    background: {
-      color: #f4f5f7;
-      size: cover;
-      position: center;
-      repeat: no-repeat;
-    }
-    overflow: hidden;
-    align-items: flex-end;
-
-    .sale {
-      position: absolute;
-      top: -30px;
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: #292929;
-      border-radius: 50%;
-      color: #ffffff;
-      padding: 30px 15px 5px 15px;
-    }
-
-    .buttons {
-      justify-content: space-between;
-      display: none;
-    }
-  }
+  @extend %product-box;
 
   &:hover {
     .buttons {
@@ -57,16 +26,32 @@
     }
 
     .stars {
-      a {
-        text-decoration: none;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: center;
+      .star {
         color: rgb(42, 42, 42);
         @extend .far;
         @extend .fa-star;
 
         &.full {
           @extend .fas;
+          color: $primary;
+        }
+        &.reviewed {
+          font-weight: 900;
+          ~ .star {
+            font-weight: 900;
+          }
         }
       }
+    }
+    .stars > span:hover:before,
+    .stars > span:hover ~ span:before,
+    .stars > span.full:before,
+    .stars > span.full ~ span:before {
+      @extend .fas;
+      color: $primary;
     }
   }
 
@@ -114,6 +99,30 @@
           left: 0;
           top: 50%;
         }
+      }
+    }
+  }
+}
+.content {
+  text-align: center;
+  padding: 20px;
+
+  .product-title {
+    color: $primary;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 1px;
+  }
+
+  .stars {
+    a {
+      text-decoration: none;
+      color: rgb(42, 42, 42);
+      @extend .far;
+      @extend .fa-star;
+
+      &.full {
+        @extend .fas;
       }
     }
   }
