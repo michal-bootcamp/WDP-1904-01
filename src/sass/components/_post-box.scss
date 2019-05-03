@@ -79,3 +79,190 @@ a.post-box-link {
     }
   }
 }
+[title~="leftside"] {
+  position: absolute;
+  top: 25%;
+  left: -5%;
+  height: 75px;
+}
+[title~="rightside"] {
+  position: absolute;
+  top: 25%;
+  right: -5%;
+  height: 75px;
+}
+[title~="leftside"] .carousel-control-prev-icon,
+[title~="rightside"] .carousel-control-next-icon {
+  height: 50px;
+  width: 50px;
+}
+.hidden {
+  display: none;
+}
+.carousel {
+  position: relative;
+  display: flex;
+}
+.centered {
+  float: none;
+  margin: 0 auto;
+}
+.car-col {
+  padding: 5px;
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+
+.row > .active > div {
+  display: none;
+}
+
+.row > .active > div:first-child {
+  display: block;
+}
+
+.carousel-inner {
+  width: 100%;
+  margin-left: 5px;
+}
+
+.carousel-item {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+#indi {
+  position: absolute;
+  top: -40px;
+  left: 850px;
+  background-color: #ffffff;
+  height: 15px;
+  width: 110px;
+}
+
+#indi > li.active {
+  background-color: $primary;
+}
+
+#indi > li {
+  width: 13px;
+  height: 13px;
+  border-radius: 6px;
+  background-color: #e1e1e1;
+  margin-left: 0.6rem;
+  border: 0.1px solid #fff;
+}
+
+@media (min-width: 992px) {
+  .carousel-inner .row > .active.left {
+    left: -100%;
+  }
+  .carousel-inner .row > .active.right {
+    left: 100%;
+  }
+  .carousel-inner .row > .next {
+    left: 100%;
+  }
+  .carousel-inner .row > .prev {
+    left: -100%;
+  }
+  .car-col {
+    width: 33%;
+  }
+  .row > .active > div:first-child + div {
+    display: block;
+  }
+  .row > .active > div:first-child + div + div {
+    display: block;
+  }
+  [title~="rightside"] {
+    top: 18%;
+    right: -2%;
+  }
+  [title~="leftside"] {
+    top: 18%;
+    left: -2%;
+  }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+  #indi {
+    left: 700px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .carousel-inner .row > .active.left {
+    left: -50%;
+  }
+  .carousel-inner .row > .active.right {
+    left: 50%;
+  }
+  .carousel-inner .next {
+    left: 50%;
+  }
+  .carousel-inner .prev {
+    left: -50%;
+  }
+  .car-col {
+    width: 50%;
+  }
+  .row > .active > div:first-child + div {
+    display: block;
+  }
+  /*
+  #indi {
+    left: 115px;
+    top: -20px;
+  }*/
+
+  #indi {
+    left: 495px;
+    top: -40px;
+  }
+  [title~="rightside"] {
+    right: -2%;
+    top: 20%;
+  }
+  [title~="leftside"] {
+    left: -2%;
+    top: 20%;
+  }
+}
+
+@media (max-width: 767px) {
+  #indi {
+    left: 50%;
+    top: -40px;
+    width: 220px;
+  }
+  [title~="rightside"] {
+    top: 30%;
+    right: 2%;
+  }
+  [title~="leftside"] {
+    top: 30%;
+    left: 2%;
+  }
+}
+
+@media (max-width: 575px) {
+  #indi {
+    left: 30%;
+    top: -40px;
+    width: 220px;
+  }
+  [title~="rightside"] {
+    right: 2%;
+    top: 25%;
+  }
+  [title~="leftside"] {
+    left: 2%;
+    top: 25%;
+  }
+  .carousel-inner {
+    margin: 0 auto;
+  }
+}
