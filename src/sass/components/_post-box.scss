@@ -79,20 +79,20 @@ a.post-box-link {
     }
   }
 }
-.left {
+[title~="leftside"] {
   position: absolute;
   top: 25%;
   left: -5%;
   height: 75px;
 }
-.right {
+[title~="rightside"] {
   position: absolute;
   top: 25%;
   right: -5%;
   height: 75px;
 }
-.carousel-control-prev .carousel-control-prev-icon,
-.carousel-control-next .carousel-control-next-icon {
+[title~="leftside"] .carousel-control-prev-icon,
+[title~="rightside"] .carousel-control-next-icon {
   height: 50px;
   width: 50px;
 }
@@ -113,22 +113,27 @@ a.post-box-link {
   width: 100%;
   height: 100%;
 }
-.active > div {
+
+.row > .active > div {
   display: none;
 }
-.active > div:first-child {
+
+.row > .active > div:first-child {
   display: block;
 }
+
 .carousel-inner {
   width: 100%;
   margin-left: 5px;
 }
+
 .carousel-item {
   width: 100%;
   height: 100%;
   margin: 0 auto;
 }
-.carousel-indicators {
+
+#indi {
   position: absolute;
   top: -40px;
   left: 850px;
@@ -136,60 +141,63 @@ a.post-box-link {
   height: 15px;
   width: 110px;
 }
-.carousel-indicators > li.active {
+
+#indi > li.active {
   background-color: $primary;
 }
-.carousel-indicators > li {
+
+#indi > li {
   width: 13px;
   height: 13px;
   border-radius: 6px;
   background-color: #e1e1e1;
   margin-left: 0.6rem;
-}
-
-@media (min-width: 993px) and (max-width: 1200px) {
-  .carousel-indicators {
-    left: 700px;
-  }
+  border: 0.1px solid #fff;
 }
 
 @media (min-width: 992px) {
-  .carousel-inner .active.left {
+  .carousel-inner .row > .active.left {
     left: -100%;
   }
-  .carousel-inner .active.right {
+  .carousel-inner .row > .active.right {
     left: 100%;
   }
-  .carousel-inner .next {
+  .carousel-inner .row > .next {
     left: 100%;
   }
-  .carousel-inner .prev {
+  .carousel-inner .row > .prev {
     left: -100%;
   }
   .car-col {
     width: 33%;
   }
-  .active > div:first-child + div {
+  .row > .active > div:first-child + div {
     display: block;
   }
-  .active > div:first-child + div + div {
+  .row > .active > div:first-child + div + div {
     display: block;
   }
-  .right {
+  [title~="rightside"] {
     top: 18%;
     right: -2%;
   }
-  .left {
+  [title~="leftside"] {
     top: 18%;
     left: -2%;
   }
 }
 
+@media (min-width: 993px) and (max-width: 1200px) {
+  #indi {
+    left: 700px;
+  }
+}
+
 @media (min-width: 768px) and (max-width: 992px) {
-  .carousel-inner .active.left {
+  .carousel-inner .row > .active.left {
     left: -50%;
   }
-  .carousel-inner .active.right {
+  .carousel-inner .row > .active.right {
     left: 50%;
   }
   .carousel-inner .next {
@@ -201,53 +209,56 @@ a.post-box-link {
   .car-col {
     width: 50%;
   }
-  .active > div:first-child + div {
+  .row > .active > div:first-child + div {
     display: block;
   }
-  .carousel-indicators {
+  /*
+  #indi {
     left: 115px;
     top: -20px;
-  }
-  .carousel-indicators {
+  }*/
+
+  #indi {
     left: 495px;
     top: -40px;
   }
-  .right {
+  [title~="rightside"] {
     right: -2%;
     top: 20%;
   }
-  .left {
+  [title~="leftside"] {
     left: -2%;
     top: 20%;
   }
 }
 
 @media (max-width: 767px) {
-  .carousel-indicators {
+  #indi {
     left: 50%;
     top: -40px;
     width: 220px;
   }
-  .right {
+  [title~="rightside"] {
     top: 30%;
     right: 2%;
   }
-  .left {
+  [title~="leftside"] {
     top: 30%;
     left: 2%;
   }
 }
+
 @media (max-width: 575px) {
-  .carousel-indicators {
+  #indi {
     left: 30%;
     top: -40px;
     width: 220px;
   }
-  .right {
+  [title~="rightside"] {
     right: 2%;
     top: 25%;
   }
-  .left {
+  [title~="leftside"] {
     left: 2%;
     top: 25%;
   }
