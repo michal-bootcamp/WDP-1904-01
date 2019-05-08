@@ -24,7 +24,7 @@ outlinesButtons.forEach(function (button) {
 
 // gallery sliders
 
-const galleryBoxes = document.querySelectorAll('.tab-pane');
+const galleryBoxes = document.querySelectorAll('.gallery-tab-pane');
 const fadeLayer = document.querySelector('.fade-layer');
 
 galleryBoxes.forEach(function (box) {
