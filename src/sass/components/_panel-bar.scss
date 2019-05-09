@@ -66,3 +66,200 @@
 .dots {
   @extend %dots;
 }
+
+.hidden {
+  display: none;
+}
+
+.carousel {
+  position: relative;
+  display: flex;
+}
+.carousel-indicators {
+  position: absolute;
+  top: -40px;
+  left: 830px;
+  background-color: #ffffff;
+  height: 15px;
+  width: 125px;
+}
+.carousel-indicators > li.active {
+  background-color: $primary;
+}
+.carousel-indicators > li {
+  width: 13px;
+  height: 13px;
+  border-radius: 6px;
+  background-color: #e1e1e1;
+  margin-left: 0.6rem;
+}
+.centered {
+  float: none;
+  margin: 0 auto;
+}
+.carousel-col {
+  padding: 5px;
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+.active > div {
+  display: none;
+}
+.active > div:first-child {
+  display: block;
+}
+.carousel-inner {
+  width: 100%;
+}
+.carousel-item {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.img-fluid {
+  width: 100%;
+  height: 100%;
+}
+
+.left {
+  position: absolute;
+  top: 25%;
+  left: -5%;
+  height: 75px;
+}
+.right {
+  position: absolute;
+  top: 25%;
+  right: -5%;
+  height: 75px;
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  .carousel-indicators {
+    left: 675px;
+  }
+}
+
+@media (min-width: 993px) {
+  .carousel-inner .active.left {
+    left: -100%;
+  }
+  .carousel-inner .active.right {
+    left: 100%;
+  }
+  .carousel-inner .next {
+    left: 100%;
+  }
+  .carousel-inner .prev {
+    left: -100%;
+  }
+  .carousel-col {
+    width: 25%;
+  }
+  .active > div:first-child + div {
+    display: block;
+  }
+  .active > div:first-child + div + div {
+    display: block;
+  }
+  .active > div:first-child + div + div + div {
+    display: block;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .carousel-inner .active.left {
+    left: -33%;
+  }
+  .carousel-inner .active.right {
+    left: 33%;
+  }
+  .carousel-inner .next {
+    left: 33%;
+  }
+  .carousel-inner .prev {
+    left: -33%;
+  }
+  .carousel-col {
+    width: 33%;
+  }
+  .active > div:first-child + div {
+    display: block;
+  }
+  .active > div:first-child + div + div {
+    display: block;
+  }
+  .carousel-indicators {
+    left: 480px;
+  }
+  .left {
+    left: 2%;
+  }
+  .right {
+    right: 2%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .carousel-inner .active.left {
+    left: -50%;
+  }
+  .carousel-inner .active.right {
+    left: 50%;
+  }
+  .carousel-inner .next {
+    left: 50%;
+  }
+  .carousel-inner .prev {
+    left: -50%;
+  }
+  .carousel-col {
+    width: 50%;
+  }
+  .active > div:first-child + div {
+    display: block;
+  }
+  .carousel-indicators {
+    left: 115px;
+    top: -20px;
+  }
+  .left {
+    left: 2%;
+  }
+  .right {
+    right: 2%;
+  }
+}
+
+@media (max-width: 575px) {
+  .carousel-inner .active.left {
+    left: -50%;
+  }
+  .carousel-inner .active.right {
+    left: 50%;
+  }
+  .carousel-inner .next {
+    left: 50%;
+  }
+  .carousel-inner .prev {
+    left: -50%;
+  }
+  .carousel-col {
+    width: 100%;
+  }
+  .active > div:first-child {
+    display: block;
+  }
+  .carousel-indicators {
+    position: absolute;
+    left: 5%;
+    top: -20px;
+    width: 225px;
+  }
+  .left {
+    left: 2%;
+  }
+  .right {
+    right: 2%;
+  }
+}
