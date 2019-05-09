@@ -1,6 +1,10 @@
 .section--gallery {
   margin-bottom: 30px;
 
+  .panel-bar {
+    margin: 0 0 30px 0;
+  }
+
   .gallery-box {
     nav {
       .nav-item {
@@ -30,17 +34,14 @@
     }
     .tab-pane {
       background-color: $lightgrey-bg;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: 30% 50%;
       position: relative;
-      height: 400px;
+      height: 490px;
 
       .outlines {
         display: inline-flex;
         flex-direction: column;
         position: absolute;
-        top: 50%;
+        top: 200px;
         transform: translateY(-50%);
 
         .btn-outline {
@@ -51,11 +52,26 @@
             color: $primary;
             background-color: transparent;
           }
+          &.active:hover {
+            background-color: $text-color;
+            color: #fff;
+            border-color: $text-color;
+          }
         }
       }
+      .image {
+        width: 70%;
+        height: 400px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        top: 0;
+        left: 10%;
+      }
+
       .content-wrapper {
         position: absolute;
-        bottom: 30px;
+        bottom: 120px;
         right: 0;
         box-shadow: 2px 2px 5px #cccccc;
 
@@ -112,45 +128,62 @@
           }
         }
       }
-    }
-    .slider {
-      height: 90px;
-      padding: 5px;
-      display: flex;
-      border-top: 1px solid $gallery-border-color;
-      border-bottom: 1px solid $gallery-border-color;
 
-      .prev,
-      .next {
-        padding: 15px;
-        margin: 5px;
-        height: 70px;
-        line-height: 38px;
-      }
+      .gallery-slider-wrapper {
+        padding: 0 60px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        border-top: 1px solid #e2e2e2;
+        border-bottom: 1px solid #e2e2e2;
 
-      .images-wrapper {
-        display: flex;
-        flex-grow: 1;
-
-        .slider-image {
+        .prev,
+        .next {
+          padding: 15px;
           height: 70px;
-          width: 100%;
-          margin: 5px;
-          background-color: &lightgrey-bg;
-          background-size: contain;
-          background-repeat: no-repeat;
-          background-position: center;
-          position: relative;
+          line-height: 38px;
+          border: 0;
+          position: absolute;
+          bottom: 10px;
 
-          &::after {
-            content: "";
-            display: block;
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background-color: rgba(0, 0, 0, 0.2);
+          &:hover {
+            color: $primary;
+          }
+        }
+        .prev {
+          left: 10px;
+        }
+        .next {
+          right: 10px;
+        }
+        .gallery-slider {
+          padding: 10px;
+
+          .slider-image {
+            height: 70px;
+            background-color: &lightgrey-bg;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            position: relative;
+
+            &.active {
+              border: 1px solid #e2e2e2;
+              &::after {
+                display: none;
+              }
+            }
+
+            &::after {
+              content: "";
+              display: block;
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              top: 0;
+              left: 0;
+              background-color: rgba(0, 0, 0, 0.2);
+            }
           }
         }
       }
@@ -184,6 +217,27 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+    }
+  }
+}
+
+/*  fade animation  */
+
+.tab-content {
+  position: relative;
+
+  .fade-layer {
+    height: calc(100% - 90px);
+    width: 100%;
+    display: none;
+    background: #fff;
+    transition: background-color 0.6s;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    &.show-fade {
+      display: block;
     }
   }
 }
