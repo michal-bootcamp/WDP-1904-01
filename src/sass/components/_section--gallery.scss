@@ -241,3 +241,25 @@
     }
   }
 }
+
+@media (min-width: 541px) and (max-width: 1000px) {
+  .section--gallery .gallery-box {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 540px) {
+  .gallery-image-wrapper {
+    display: none;
+  }
+}
+
+@media (max-width: 440px) {
+  .section--gallery .gallery-box .nav {
+    flex-direction: column;
+
+    .nav-item {
+      border-left: 1px solid #e2e2e2;
+    }
+  }
+}
